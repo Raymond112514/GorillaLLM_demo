@@ -1,0 +1,1369 @@
+File,Class Name,Function Name,Description
+gorilla_file_system.py,GorillaFileSystem,pwd(),"Return the current working directory path.
+
+Returns:
+
+•        current_working_directory (str): The current working directory path
+
+"
+gorilla_file_system.py,GorillaFileSystem,ls(a: bool),"List the contents of the current directory.
+
+Args:
+
+• a (bool): Show hidden files and directories
+
+Returns:
+
+•        current_directory_content (list): A list of the contents of the specified directory
+
+"
+gorilla_file_system.py,GorillaFileSystem,cd(folder: str),"Change the current working directory to the specified folder.
+
+Args:
+
+• folder (str): The folder of the directory to change to
+
+Returns:
+
+•        current_working_directory (str): The new current working directory path
+
+"
+gorilla_file_system.py,GorillaFileSystem,mkdir(dir_name: str),"Create a new directory in the current directory.
+
+Args:
+
+• dir_name (str): The name of the new directory at current directory
+
+Returns:
+
+•        error (dict): None if successful, or error message if directory already exists
+
+"
+gorilla_file_system.py,GorillaFileSystem,touch(file_name: str),"Create a new file in the current directory.
+
+Args:
+
+• file_name (str): The name of the new file in the current directory
+
+Returns:
+
+•        error (dict): None if successful, or error message if file already exists
+
+"
+gorilla_file_system.py,GorillaFileSystem,"echo(content: str, file_name: str)","Write content to a file at current directory or display it in the terminal.
+
+Args:
+
+• content (str): The content to write or display
+
+• file_name (str): The name of the file at current directory to write the content to
+
+Returns:
+
+•        terminal_output (str): The content if no file name is provided, or None if written to file
+
+"
+gorilla_file_system.py,GorillaFileSystem,cat(file_name: str),"Display the contents of a file from currrent directory.
+
+Args:
+
+• file_name (str): The name of the file from current directory to display
+
+Returns:
+
+•        file_content (str): The content of the file
+
+"
+gorilla_file_system.py,GorillaFileSystem,find(path: str),"Find any file or directories under specific path that contain name in its file name.This method searches for files and directories within a specified path that matchthe given name. If no name is provided, it returns all files and directoriesin the specified path and its subdirectories.
+
+Args:
+
+• path (str): The directory path to start the search
+
+"
+gorilla_file_system.py,GorillaFileSystem,"wc(file_name: str, mode: str)","Count the number of lines, words, and characters in a file from current directory.
+
+Args:
+
+• file_name (str): Name of the file of current directory to perform wc operation on
+
+• mode (str): Mode of operation ('l' for lines, 'w' for words, 'c' for characters)
+
+"
+gorilla_file_system.py,GorillaFileSystem,sort(file_name: str),"Sort the contents of a file line by line.
+
+Args:
+
+• file_name (str): The name of the file appeared at current directory to sort
+
+Returns:
+
+•        sorted_content (str): The sorted content of the file
+
+"
+gorilla_file_system.py,GorillaFileSystem,"grep(file_name: str, pattern: str)","Search for lines in a file at current directory that contain the specified pattern.
+
+Args:
+
+• file_name (str): The name of the file to search
+
+• pattern (str): The pattern to search for
+
+Returns:
+
+•        matching_lines (list): Lines that match the pattern
+
+"
+gorilla_file_system.py,GorillaFileSystem,"xargs(command: str, file_name: str)","Execute a command with arguments read from a file or standard input.
+
+Args:
+
+• command (str): The command to execute with arguments
+
+• file_name (str): The file containing arguments
+
+Returns:
+
+•        output (str): The result of the command execution
+
+"
+gorilla_file_system.py,GorillaFileSystem,du(human_readable: bool),"Estimate the disk usage of a directory and its contents.
+
+Args:
+
+• human_readable (bool): If True, returns the size in human-readable format (e
+
+Returns:
+
+•        disk_usage (str): The estimated disk usage
+
+"
+gorilla_file_system.py,GorillaFileSystem,"tail(file_name: str, lines: int)","Display the last part of a file.
+
+Args:
+
+• file_name (str): The name of the file to display
+
+• lines (int): The number of lines to display from the end of the file
+
+Returns:
+
+•        last_lines (str): The last part of the file
+
+"
+gorilla_file_system.py,GorillaFileSystem,"diff(file_name1: str, file_name2: str)","Compare two files line by line at the current directory.
+
+Args:
+
+• file_name1 (str): The name of the first file in current directory
+
+• file_name2 (str): The name of the second file in current directorry
+
+Returns:
+
+•        diff_lines (str): The differences between the two files
+
+"
+gorilla_file_system.py,GorillaFileSystem,"mv(source: str, destination: str)","Move a file or directory from one location to another. so
+
+Args:
+
+• source (str): Source name of the file or directory to move
+
+• destination (str): The destination name to move the file or directory to
+
+Returns:
+
+•        result (str): The result of the move operation
+
+"
+gorilla_file_system.py,GorillaFileSystem,rm(file_name: str),"Remove a file or directory.
+
+Args:
+
+• file_name (str): The name of the file or directory to remove
+
+Returns:
+
+•        result (str): The result of the remove operation
+
+"
+gorilla_file_system.py,GorillaFileSystem,rmdir(dir_name: str),"Remove a directory at current directory.
+
+Args:
+
+• dir_name (str): The name of the directory to remove
+
+Returns:
+
+•        result (str): The result of the remove operation
+
+"
+gorilla_file_system.py,GorillaFileSystem,"cp(source: str, destination: str)","Copy a file or directory from one location to another.If the destination is a directory, the source file or directory will be copied into the destination directory.Both source and destination must be local to the current directory.
+
+Args:
+
+• source (str): The name of the file or directory to copy
+
+• destination (str): The destination anem to copy the file or directory to
+
+Returns:
+
+•        result (str): The result of the copy operation or an error message if the operation fails
+
+"
+math_api.py,MathAPI,"logarithm(value: float, base: float, precision: int)","Compute the logarithm of a number with adjustable precision using mpmath.
+
+Args:
+
+• value (float): The number to compute the logarithm of
+
+• base (float): The base of the logarithm
+
+• precision (int): Desired precision for the result
+
+"
+math_api.py,MathAPI,mean(),"Calculate the mean of a list of numbers.
+
+Returns:
+
+•        result (float): Mean of the numbers
+
+"
+math_api.py,MathAPI,standard_deviation(),"Calculate the standard deviation of a list of numbers.
+
+Returns:
+
+•        result (float): Standard deviation of the numbers
+
+"
+math_api.py,MathAPI,"si_unit_conversion(value: float, unit_in: str, unit_out: str)","Convert a value from one SI unit to another.
+
+Args:
+
+• value (float): Value to be converted
+
+• unit_in (str): Unit of the input value
+
+• unit_out (str): Unit to convert the value to
+
+Returns:
+
+•        result (float): Converted value in the new unit
+
+"
+math_api.py,MathAPI,"imperial_si_conversion(value: float, unit_in: str, unit_out: str)","Convert a value between imperial and SI units.
+
+Args:
+
+• value (float): Value to be converted
+
+• unit_in (str): Unit of the input value
+
+• unit_out (str): Unit to convert the value to
+
+Returns:
+
+•        result (float): Converted value in the new unit
+
+"
+math_api.py,MathAPI,"add(a: float, b: float)","Add two numbers.
+
+Args:
+
+• a (float): First number
+
+• b (float): Second number
+
+Returns:
+
+•        result (float): Sum of the two numbers
+
+"
+math_api.py,MathAPI,"subtract(a: float, b: float)","Subtract one number from another.
+
+Args:
+
+• a (float): Number to subtract from
+
+• b (float): Number to subtract
+
+Returns:
+
+•        result (float): Difference between the two numbers
+
+"
+math_api.py,MathAPI,"multiply(a: float, b: float)","Multiply two numbers.
+
+Args:
+
+• a (float): First number
+
+• b (float): Second number
+
+Returns:
+
+•        result (float): Product of the two numbers
+
+"
+math_api.py,MathAPI,"divide(a: float, b: float)","Divide one number by another.
+
+Args:
+
+• a (float): Numerator
+
+• b (float): Denominator
+
+Returns:
+
+•        result (float): Quotient of the division
+
+"
+math_api.py,MathAPI,"power(base: float, exponent: float)","Raise a number to a power.
+
+Args:
+
+• base (float): The base number
+
+• exponent (float): The exponent
+
+Returns:
+
+•        result (float): The base raised to the power of the exponent
+
+"
+math_api.py,MathAPI,"square_root(number: float, precision: int)","Calculate the square root of a number with adjustable precision using the decimal module.
+
+Args:
+
+• number (float): The number to calculate the square root of
+
+• precision (int): Desired precision for the result
+
+"
+math_api.py,MathAPI,absolute_value(number: float),"Calculate the absolute value of a number.
+
+Args:
+
+• number (float): The number to calculate the absolute value of
+
+Returns:
+
+•        result (float): The absolute value of the number
+
+"
+math_api.py,MathAPI,"round_number(number: float, decimal_places: int)","Round a number to a specified number of decimal places.
+
+Args:
+
+• number (float): The number to round
+
+• decimal_places (int): The number of decimal places to round to
+
+Returns:
+
+•        result (float): The rounded number
+
+"
+math_api.py,MathAPI,"percentage(part: float, whole: float)","Calculate the percentage of a part relative to a whole.
+
+Args:
+
+• part (float): The part value
+
+• whole (float): The whole value
+
+Returns:
+
+•        result (float): The percentage of the part relative to the whole
+
+"
+math_api.py,MathAPI,min_value(),"Find the minimum value in a list of numbers.
+
+Returns:
+
+•        result (float): The minimum value in the list
+
+"
+math_api.py,MathAPI,max_value(),"Find the maximum value in a list of numbers.
+
+Returns:
+
+•        result (float): The maximum value in the list
+
+"
+math_api.py,MathAPI,sum_values(),"Calculate the sum of a list of numbers.
+
+Returns:
+
+•        result (float): The sum of all numbers in the list
+
+"
+message_api.py,MessageAPI,generate_id,"No description provided.
+
+"
+message_api.py,MessageAPI,list_users(),"List all users in the workspace.
+
+"
+message_api.py,MessageAPI,get_user_id(user: str),"Get user ID from user name.
+
+Args:
+
+• user (str): User name of the user
+
+"
+message_api.py,MessageAPI,login(user_id: str),"Log in a user with the given user ID.
+
+Args:
+
+• user_id (str): User ID of the user to log in
+
+Returns:
+
+•        login_status (bool): True if login was successful, False otherwise
+
+•        message (str): A message describing the result of the login attempt
+
+"
+message_api.py,MessageAPI,"send_message(sender_id: str, receiver_id: str, message: str)","Send a message to a user.
+
+Args:
+
+• sender_id (str): User ID of the user sending the message
+
+• receiver_id (str): User ID of the user to send the message to
+
+• message (str): Message to be sent
+
+Returns:
+
+•        sent_status (bool): True if the message was sent successfully, False otherwise
+
+•        message_id (int): ID of the sent message
+
+•        message (str): A message describing the result of the send attempt
+
+"
+message_api.py,MessageAPI,"delete_message(sender_id: str, receiver_id: str, message_id: int)","Delete a message sent to a user.
+
+Args:
+
+• sender_id (str): User ID of the user sending the message
+
+• receiver_id (str): User ID of the user to send the message to
+
+• message_id (int): ID of the message to be deleted
+
+Returns:
+
+•        deleted_status (bool): True if the message was deleted successfully, False otherwise
+
+•        message_id (int): ID of the deleted message
+
+•        message (str): A message describing the result of the deletion attempt
+
+"
+message_api.py,MessageAPI,view_messages_received(),"View all messages sent to the current user.
+
+"
+message_api.py,MessageAPI,view_messages_sent(),"View all historical messages sent by the current user.
+
+"
+message_api.py,MessageAPI,add_contact(user_name: str),"Add a contact to the workspace.
+
+Args:
+
+• user_name (str): User name of contact to be added
+
+Returns:
+
+•        added_status (bool): True if the contact was added successfully, False otherwise
+
+•        user_id (str): User ID of the added contact
+
+•        message (str): A message describing the result of the addition attempt
+
+"
+message_api.py,MessageAPI,search_messages(keyword: str),"Search for messages containing a specific keyword.
+
+Args:
+
+• keyword (str): The keyword to search for in messages
+
+Returns:
+
+•        sender_id (str): The ID of the user who sent the message
+
+•        receiver_id (str): The ID of the user who received the message
+
+"
+message_api.py,MessageAPI,"get_message_stats(sent_count: int, received_count: int, total_contacts: int)","Get statistics about messages for the current user.
+
+Args:
+
+• sent_count (int): Number of messages sent by the current user
+
+• received_count (int): Number of messages received by the current user
+
+• total_contacts (int): Total number of contacts the user has interacted with
+
+"
+posting_api.py,TwitterAPI,"authenticate(username: str, password: str)","Authenticate a user with username and password.
+
+Args:
+
+• username (str): Username of the user
+
+• password (str): Password of the user
+
+Returns:
+
+•        authentication_status (bool): True if authenticated, False otherwise
+
+"
+posting_api.py,TwitterAPI,post_tweet(content: str),"Post a tweet for the authenticated user.
+
+Args:
+
+• content (str): Content of the tweet
+
+Returns:
+
+•        id (int): ID of the posted tweet
+
+•        username (str): Username of the poster
+
+•        content (str): Content of the tweet
+
+"
+posting_api.py,TwitterAPI,retweet(tweet_id: int),"Retweet a tweet for the authenticated user.
+
+Args:
+
+• tweet_id (int): ID of the tweet to retweet
+
+Returns:
+
+•        retweet_status (str): Status of the retweet action
+
+"
+posting_api.py,TwitterAPI,"comment(tweet_id: int, comment_content: str)","Comment on a tweet for the authenticated user.
+
+Args:
+
+• tweet_id (int): ID of the tweet to comment on
+
+• comment_content (str): Content of the comment
+
+Returns:
+
+•        comment_status (str): Status of the comment action
+
+"
+posting_api.py,TwitterAPI,mention(tweet_id: int),"Mention specified users in a tweet.
+
+Args:
+
+• tweet_id (int): ID of the tweet where users are mentioned
+
+Returns:
+
+•        mention_status (str): Status of the mention action
+
+"
+posting_api.py,TwitterAPI,follow_user(username_to_follow: str),"Follow a user for the authenticated user.
+
+Args:
+
+• username_to_follow (str): Username of the user to follow
+
+Returns:
+
+•        follow_status (bool): True if followed, False if already following
+
+"
+posting_api.py,TwitterAPI,list_all_following(),"List all users that the authenticated user is following.
+
+"
+posting_api.py,TwitterAPI,unfollow_user(username_to_unfollow: str),"Unfollow a user for the authenticated user.
+
+Args:
+
+• username_to_unfollow (str): Username of the user to unfollow
+
+Returns:
+
+•        unfollow_status (bool): True if unfollowed, False if not following
+
+"
+posting_api.py,TwitterAPI,get_tweet(tweet_id: int),"Retrieve a specific tweet.
+
+Args:
+
+• tweet_id (int): ID of the tweet to retrieve
+
+Returns:
+
+•        id (int): ID of the retrieved tweet
+
+•        username (str): Username of the tweet's author
+
+•        content (str): Content of the tweet
+
+"
+posting_api.py,TwitterAPI,get_user_tweets(username: str),"Retrieve all tweets from a specific user.
+
+Args:
+
+• username (str): Username of the user whose tweets to retrieve
+
+"
+posting_api.py,TwitterAPI,search_tweets(keyword: str),"Search for tweets containing a specific keyword.
+
+Args:
+
+• keyword (str): Keyword to search for in tweets
+
+"
+posting_api.py,TwitterAPI,get_tweet_comments(tweet_id: int),"Retrieve all comments for a specific tweet.
+
+Args:
+
+• tweet_id (int): ID of the tweet to retrieve comments for
+
+"
+posting_api.py,TwitterAPI,get_user_stats(username: str),"Get statistics for a specific user.
+
+Args:
+
+• username (str): Username of the user to get statistics for
+
+Returns:
+
+•        tweet_count (int): Number of tweets posted by the user
+
+•        following_count (int): Number of users the specified user is following
+
+•        retweet_count (int): Number of retweets made by the user
+
+"
+ticket_api.py,TicketAPI,"create_ticket(title: str, description: str, priority: int)","Create a ticket in the system and queue it.
+
+Args:
+
+• title (str): Title of the ticket
+
+• description (str): Description of the ticket
+
+• priority (int): Priority of the ticket, from 1 to 5
+
+Returns:
+
+•        id (int): Unique identifier of the ticket
+
+•        title (str): Title of the ticket
+
+•        description (str): Description of the ticket
+
+•        status (str): Current status of the ticket
+
+•        priority (int): Priority level of the ticket
+
+"
+ticket_api.py,TicketAPI,get_ticket(ticket_id: int),"Get a specific ticket by its ID.
+
+Args:
+
+• ticket_id (int): ID of the ticket to retrieve
+
+Returns:
+
+•        id (int): Unique identifier of the ticket
+
+•        title (str): Title of the ticket
+
+•        description (str): Description of the ticket
+
+•        status (str): Current status of the ticket
+
+•        priority (int): Priority level of the ticket
+
+•        created_by (str): Username of the ticket creator
+
+"
+ticket_api.py,TicketAPI,close_ticket(ticket_id: int),"Close a ticket.
+
+Args:
+
+• ticket_id (int): ID of the ticket to be closed
+
+Returns:
+
+•        status (str): Status of the close operation
+
+"
+ticket_api.py,TicketAPI,"resolve_ticket(ticket_id: int, resolution: str)","Resolve a ticket with a resolution.
+
+Args:
+
+• ticket_id (int): ID of the ticket to be resolved
+
+• resolution (str): Resolution details for the ticket
+
+Returns:
+
+•        status (str): Status of the resolve operation
+
+"
+ticket_api.py,TicketAPI,edit_ticket(ticket_id: int),"Modify the details of an existing ticket.
+
+Args:
+
+• ticket_id (int): ID of the ticket to be changed
+
+Returns:
+
+•        status (str): Status of the update operation
+
+"
+ticket_api.py,TicketAPI,find_ticket(ticket_id: int),"Find a ticket by its ID.
+
+Args:
+
+• ticket_id (int): ID of the ticket to find
+
+"
+ticket_api.py,TicketAPI,"login(username: str, password: str)","Authenticate a user.
+
+Args:
+
+• username (str): Username of the user
+
+• password (str): Password of the user
+
+Returns:
+
+•        success (bool): True if login was successful, False otherwise
+
+"
+ticket_api.py,TicketAPI,logout(success: bool),"Log out the current user.
+
+Args:
+
+• success (bool): True if logout was successful, False otherwise
+
+"
+ticket_api.py,TicketAPI,get_user_tickets(),"Get all tickets created by the current user, optionally filtered by status.
+
+"
+trading_bot.py,TradingBot,get_current_time(current_time: str),"Get the current time.
+
+Args:
+
+• current_time (str): Current time in HH:MM AM/PM format
+
+"
+trading_bot.py,TradingBot,update_market_status(current_time_str: str),"Update the market status based on the current time.
+
+Args:
+
+• current_time_str (str): Current time in HH:MM AM/PM format
+
+Returns:
+
+•        status (str): Status of the market ('Open' or 'Closed')
+
+"
+trading_bot.py,TradingBot,get_symbol_by_name(name: str),"Get the symbol of a stock by company name.
+
+Args:
+
+• name (str): Name of the company
+
+Returns:
+
+•        symbol (str): Symbol of the stock or ""Stock not found"" if not available
+
+"
+trading_bot.py,TradingBot,get_stock_info(symbol: str),"Get the details of a stock.
+
+Args:
+
+• symbol (str): Symbol that uniquely identifies the stock
+
+Returns:
+
+•        price (float): Current price of the stock
+
+•        percent_change (float): Percentage change in stock price
+
+•        volume (float): Trading volume of the stock
+
+•        MA5 (float): 5-day Moving Average of the stock
+
+•        MA20 (float): 20-day Moving Average of the stock
+
+"
+trading_bot.py,TradingBot,get_order_details(order_id: int),"Get the details of an order.
+
+Args:
+
+• order_id (int): ID of the order
+
+Returns:
+
+•        symbol (str): Symbol of the stock in the order
+
+•        price (float): Price at which the order was placed
+
+•        num_shares (int): Number of shares in the order
+
+•        status (str): Current status of the order
+
+"
+trading_bot.py,TradingBot,cancel_order(order_id: int),"Cancel an order.
+
+Args:
+
+• order_id (int): ID of the order to cancel
+
+Returns:
+
+•        order_id (int): ID of the cancelled order
+
+•        status (str): New status of the order after cancellation attempt
+
+"
+trading_bot.py,TradingBot,"place_order(order_type: str, symbol: str, price: float, amount: int)","Place an order.
+
+Args:
+
+• order_type (str): Type of the order (Buy/Sell)
+
+• symbol (str): Symbol of the stock to trade
+
+• price (float): Price at which to place the order
+
+• amount (int): Number of shares to trade
+
+Returns:
+
+•        order_id (int): ID of the newly placed order
+
+•        order_type (str): Type of the order (Buy/Sell)
+
+•        status (str): Initial status of the order
+
+•        price (float): Price at which the order was placed
+
+•        amount (int): Number of shares in the order
+
+"
+trading_bot.py,TradingBot,"make_transaction(account_id: int, xact_type: str, amount: float)","Make a deposit or withdrawal based on specified amount.
+
+Args:
+
+• account_id (int): ID of the account
+
+• xact_type (str): Transaction type (deposit or withdrawal)
+
+• amount (float): Amount to deposit or withdraw
+
+Returns:
+
+•        status (str): Status of the transaction
+
+•        new_balance (float): Updated account balance after the transaction
+
+"
+trading_bot.py,TradingBot,"get_account_info(account_id: int, balance: float, binding_card: int)","Get account information.
+
+Args:
+
+• account_id (int): ID of the account
+
+• balance (float): Current balance of the account
+
+• binding_card (int): Card number associated with the account
+
+"
+trading_bot.py,TradingBot,"login(username: str, password: str)","Handle user login.
+
+Args:
+
+• username (str): Username for authentication
+
+• password (str): Password for authentication
+
+Returns:
+
+•        status (str): Login status message
+
+"
+trading_bot.py,TradingBot,logout(status: str),"Handle user logout.
+
+Args:
+
+• status (str): Logout status message
+
+"
+trading_bot.py,TradingBot,fund_account(amount: float),"Fund the account with the specified amount.
+
+Args:
+
+• amount (float): Amount to fund the account with
+
+Returns:
+
+•        status (str): Status of the funding operation
+
+•        new_balance (float): Updated account balance after funding
+
+"
+trading_bot.py,TradingBot,add_stock_to_watchlist(symbol: str),"Add a stock to the watchlist.
+
+Args:
+
+• symbol (str): Symbol of the stock to add
+
+Returns:
+
+•        status (str): Status of the addition operation
+
+"
+trading_bot.py,TradingBot,remove_stock_from_watchlist(symbol: str),"Remove a stock from the watchlist.
+
+Args:
+
+• symbol (str): Symbol of the stock to remove
+
+Returns:
+
+•        status (str): Status of the removal operation
+
+"
+trading_bot.py,TradingBot,get_watchlist(),"Get the watchlist.
+
+"
+trading_bot.py,TradingBot,get_transaction_history(),"Get the transaction history within a specified date range.
+
+"
+trading_bot.py,TradingBot,"update_stock_price(symbol: str, new_price: float)","Update the price of a stock.
+
+Args:
+
+• symbol (str): Symbol of the stock to update
+
+• new_price (float): New price of the stock
+
+Returns:
+
+•        symbol (str): Symbol of the updated stock
+
+•        old_price (float): Previous price of the stock
+
+•        new_price (float): Updated price of the stock
+
+"
+trading_bot.py,TradingBot,get_available_stocks(sector: str),"Get a list of stock symbols in the given sector.
+
+Args:
+
+• sector (str): The sector to retrieve stocks from (e
+
+"
+trading_bot.py,TradingBot,"filter_stocks_by_price(min_price: float, max_price: float)","Filter stocks based on a price range.
+
+Args:
+
+• min_price (float): Minimum stock price
+
+• max_price (float): Maximum stock price
+
+"
+trading_bot.py,TradingBot,add_to_watchlist(),"Add a list of stocks to the watchlist.
+
+"
+trading_bot.py,TradingBot,notify_price_change(threshold: float),"Notify if there is a significant price change in the stocks.
+
+Args:
+
+• threshold (float): Percentage change threshold to trigger a notification
+
+"
+travel_booking.py,TravelAPI,"authenticate(client_id: str, user_first_name: str)","Authenticate the user with the travel API
+
+Args:
+
+• client_id (str): Required The client applications client_id supplied by App Management    client_secret (str): Required The client applications client_secret supplied by App Management    refresh_token (str): Required The refresh token obtained from the initial authentication    grant_type (str): Required The grant type of the authentication request
+
+• user_first_name (str): Required The first name of the user    user_last_name (str): Required The last name of the user
+
+Returns:
+
+•        expires_in (int): The number of time it can use until the access token expires    access_token (str): The access token to be used in the Authorization header of future requests    token_type (str): The type of token    scope (str): The scope of the token
+
+"
+travel_booking.py,TravelAPI,get_budget_fiscal_year(),"Get the budget fiscal year
+
+"
+travel_booking.py,TravelAPI,register_credit_card(access_token: str),"Register a credit card
+
+Args:
+
+• access_token (str): Required The access token obtained from the authenticate method    card_number (str): Required The credit card number    expiration_date (str): Required The expiration date of the credit card in the format MM/YYYY    cardholder_name (str): Required The name of the cardholder    card_verification_number (int): Required The card verification number
+
+Returns:
+
+•        card_id (str): The ID of the registered credit card
+
+"
+travel_booking.py,TravelAPI,get_flight_cost(travel_from: str),"Get the cost of a flight in USD based on date, location, and class
+
+Args:
+
+• travel_from (str): Required The location the travel is from    travel_to (str): Required The location the travel is to    travel_date (str): Required The date of the travel in the format YYYY-MM-DD    travel_class (str): Required The class of the travel
+
+Returns:
+
+•        travel_cost (float): The cost of the travel
+
+"
+travel_booking.py,TravelAPI,get_credit_card_balance(access_token: str),"Get the balance of a credit card
+
+Args:
+
+• access_token (str): Required The access token obtained from the authenticate    card_id (str): Required The ID of the credit card
+
+Returns:
+
+•        card_balance (float): The balance of the credit card
+
+"
+travel_booking.py,TravelAPI,book_flight(access_token: str),"Book a flight given the travel information. From and To should be the airport codes in the IATA format.
+
+Args:
+
+• access_token (str): Required The access token obtained from the authenticate    card_id (str): Required The ID of the credit card to use for the booking    travel_date (str): Required The date of the travel in the format YYYY-MM-DD    travel_from (str): Required The location the travel is from    travel_to (str): Required The location the travel is to    travel_class (str): Required The class of the travel    travel_cost (float): Required The cost of the travel
+
+Returns:
+
+•        booking_id (str): The ID of the booking    transaction_id (str): The ID of the transaction    booking_status (bool): The status of the booking, True if successful, False if failed    error (str): The error message if the booking failed
+
+"
+travel_booking.py,TravelAPI,retrieve_invoice(access_token: str),"Retrieve the invoice for a booking
+
+Args:
+
+• access_token (str): Required The access token obtained from the authenticate    booking_id (Optional[str]): Optional The ID of the booking    insurance_id (Optional[str]): Optional The ID of the insurance
+
+Returns:
+
+•        invoice (dict): The invoice for the booking    error (str): The error message if the booking was not found
+
+"
+travel_booking.py,TravelAPI,list_all_airports(),"List all available airports
+
+"
+travel_booking.py,TravelAPI,cancel_booking(access_token: str),"Cancel a booking
+
+Args:
+
+• access_token (str): Required The access token obtained from the authenticate    booking_id (str): Required The ID of the booking
+
+Returns:
+
+•        cancel_status (bool): The status of the cancellation, True if successful, False if failed    error (str): The error message if the cancellation failed
+
+"
+travel_booking.py,TravelAPI,compute_exchange_rate(base_currency: str),"Compute the exchange rate between two currencies
+
+Args:
+
+• base_currency (str): Required The base currency    target_currency (str): Required The target currency    value (float): Required The value to convert
+
+Returns:
+
+•        exchanged_value (float): The value after the exchange
+
+"
+travel_booking.py,TravelAPI,verify_traveler_information(first_name: str),"Verify the traveler information
+
+Args:
+
+• first_name (str): Required The first name of the traveler    last_name (str): Required The last name of the traveler    date_of_birth (str): Required The date of birth of the traveler in the format YYYY-MM-DD    passport_number (str): Required The passport number of the traveler
+
+Returns:
+
+•        verification_status (bool): The status of the verification, True if successful, False if failed    verification_failure (str): The reason for the verification failure
+
+"
+travel_booking.py,TravelAPI,set_budget_limit(access_token: str),"Set the budget limit for the user
+
+Args:
+
+• access_token (str): Required The access token obtained from the authenticate    budget_limit (float): Required The budget limit to set in USD
+
+Returns:
+
+•        budget_limit (float): The budget limit set in USD
+
+"
+travel_booking.py,TravelAPI,get_nearest_airport_by_city(location: str),"Get the nearest airport to a location
+
+Args:
+
+• location (str): Required The location to find the nearest airport to
+
+Returns:
+
+•        nearest_airport (str): The nearest airport to the location
+
+"
+travel_booking.py,TravelAPI,purchase_insurance(access_token: str),"Purchase insurance
+
+Args:
+
+• access_token (str): Required The access token obtained from the authenticate    insurance_type (str): Required The type of insurance to purchase    insurance_cost (float): Required The cost of the insurance    booking_id (str): Required The ID of the booking    credit_card_id (str): Required The ID of the credit card to use for the
+
+Returns:
+
+•        insurance_id (str): The ID of the insurance    insurance_status (bool): The status of the insurance purchase, True if successful, False if failed    error (str): The error message if the insurance purchase failed
+
+"
+travel_booking.py,TravelAPI,contact_customer_support(booking_id: str),"Contact customer support
+
+Args:
+
+• booking_id (str): Required The ID of the booking    message (str): Required The message to send to customer support
+
+Returns:
+
+•        customer_support_message (str): The message from customer support
+
+"
+travel_booking.py,TravelAPI,get_all_credit_cards(),"Get all registered credit cards
+
+"
+vehicle_control.py,VehicleControlAPI,startEngine(ignitionMode: str),"Starts the engine of the vehicle.
+
+Args:
+
+• ignitionMode (str): The ignition mode of the vehicle
+
+Returns:
+
+•        engineState (str): The state of the engine
+
+•        fuelLevel (float): The fuel level of the vehicle in gallons
+
+•        batteryVoltage (float): The battery voltage of the vehicle in volts
+
+"
+vehicle_control.py,VehicleControlAPI,fillFuelTank(fuelAmount: float),"Fills the fuel tank of the vehicle. The fuel tank can hold up to 50 gallons.
+
+Args:
+
+• fuelAmount (float): The amount of fuel to fill in gallons
+
+Returns:
+
+•        fuelLevel (float): The fuel level of the vehicle in gallons
+
+"
+vehicle_control.py,VehicleControlAPI,lockDoors(unlock: bool),"Locks the doors of the vehicle.
+
+Args:
+
+• unlock (bool): True if the doors are to be unlocked, False otherwise
+
+Returns:
+
+•        lockStatus (str): The status of the lock
+
+•        remainingUnlockedDoors (int): The number of remaining unlocked doors
+
+"
+vehicle_control.py,VehicleControlAPI,"adjustClimateControl(temperature: float, unit: str, fanSpeed: int, mode: str)","Adjusts the climate control of the vehicle.
+
+Args:
+
+• temperature (float): The temperature to set in degree
+
+• unit (str): The unit of temperature
+
+• fanSpeed (int): The fan speed to set from 0 to 100
+
+• mode (str): The climate mode to set
+
+Returns:
+
+•        currentTemperature (float): The current temperature set in degree Celsius
+
+•        climateMode (str): The current climate mode set
+
+•        humidityLevel (float): The humidity level in percentage
+
+"
+vehicle_control.py,VehicleControlAPI,get_outside_temperature_from_google(outsideTemperature: float),"Gets the outside temperature.
+
+Args:
+
+• outsideTemperature (float): The outside temperature in degree Celsius
+
+"
+vehicle_control.py,VehicleControlAPI,get_outside_temperature_from_weather_com(outsideTemperature: float),"Gets the outside temperature.
+
+Args:
+
+• outsideTemperature (float): The outside temperature in degree Celsius
+
+"
+vehicle_control.py,VehicleControlAPI,setHeadlights(mode: str),"Sets the headlights of the vehicle.
+
+Args:
+
+• mode (str): The mode of the headlights
+
+Returns:
+
+•        headlightStatus (str): The status of the headlights
+
+"
+vehicle_control.py,VehicleControlAPI,displayCarStatus(option: str),"Displays the status of the vehicle based on the provided display option.
+
+Args:
+
+• option (str): The option to display
+
+Returns:
+
+•        status (dict): The status of the vehicle based on the option
+
+"
+vehicle_control.py,VehicleControlAPI,activateParkingBrake(mode: str),"Activates the parking brake of the vehicle.
+
+Args:
+
+• mode (str): The mode to set
+
+Returns:
+
+•        brakeStatus (str): The status of the brake
+
+•        brakeForce (float): The force applied to the brake in Newtons
+
+•        slopeAngle (float): The slope angle in degrees
+
+"
+vehicle_control.py,VehicleControlAPI,"setCruiseControl(speed: float, activate: bool, distanceToNextVehicle: float)","Sets the cruise control of the vehicle.
+
+Args:
+
+• speed (float): The speed to set in m/h
+
+• activate (bool): True to activate the cruise control, False to deactivate
+
+• distanceToNextVehicle (float): The distance to the next vehicle in meters
+
+Returns:
+
+•        cruiseStatus (str): The status of the cruise control
+
+•        currentSpeed (float): The current speed of the vehicle in km/h
+
+•        distanceToNextVehicle (float): The distance to the next vehicle in meters
+
+"
+vehicle_control.py,VehicleControlAPI,get_current_speed(currentSpeed: float),"Gets the current speed of the vehicle.
+
+Args:
+
+• currentSpeed (float): The current speed of the vehicle in km/h
+
+"
+vehicle_control.py,VehicleControlAPI,display_log(),"Displays the log messages.
+
+"
+vehicle_control.py,VehicleControlAPI,estimate_drive_feasibility_by_mileage(distance: float),"Estimates the milage of the vehicle given the distance needed to drive.
+
+Args:
+
+• distance (float): The distance to travel in miles
+
+Returns:
+
+•        canDrive (bool): True if the vehicle can drive the distance, False otherwise
+
+"
+vehicle_control.py,VehicleControlAPI,liter_to_gallon(liter: float),"Converts the liter to gallon.
+
+Args:
+
+• liter (float): The amount of liter to convert
+
+Returns:
+
+•        gallon (float): The amount of gallon converted
+
+"
+vehicle_control.py,VehicleControlAPI,gallon_to_liter(gallon: float),"Converts the gallon to liter.
+
+Args:
+
+• gallon (float): The amount of gallon to convert
+
+Returns:
+
+•        liter (float): The amount of liter converted
+
+"
+vehicle_control.py,VehicleControlAPI,"estimate_distance(cityA: str, cityB: str)","Estimates the distance between two cities.
+
+Args:
+
+• cityA (str): The zipcode of the first city
+
+• cityB (str): The zipcode of the second city
+
+Returns:
+
+•        distance (float): The distance between the two cities in km
+
+"
+vehicle_control.py,VehicleControlAPI,get_zipcode_based_on_city(city: str),"Gets the zipcode based on the city.
+
+Args:
+
+• city (str): The name of the city
+
+Returns:
+
+•        zipcode (str): The zipcode of the city
+
+"
+vehicle_control.py,VehicleControlAPI,set_navigation(destination: str),"Navigates to the destination.
+
+Args:
+
+• destination (str): The destination to navigate in the format of street, city, state
+
+Returns:
+
+•        status (dict): The status of the navigation
+
+"
+vehicle_control.py,VehicleControlAPI,check_tire_pressure(tirePressure: dict),"Checks the tire pressure of the vehicle.
+
+Args:
+
+• tirePressure (dict): The tire pressure of the vehicle
+
+"
+vehicle_control.py,VehicleControlAPI,find_nearest_tire_shop(shopLocation: str),"Finds the nearest tire shop.
+
+Args:
+
+• shopLocation (str): The location of the nearest tire shop
+
+"
